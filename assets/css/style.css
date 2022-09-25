@@ -254,11 +254,38 @@ footer {
 /* Form */
 
 .form-section {
-    clear: left;
+    width: 100%;
+    height: 900px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+#signup-image {
     background: url("../images/female-runner-beach.jpg") no-repeat center center;
+    height: 900px;
+    width: 100%;
+
     background-size: cover;
     background-position: center;
-    height: 900px;
+    clear: left;
+    position: absolute;
+    
+    /* Animates zoom effect on signup page */
+    animation-name: signup-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+/* Creates the level of zoom for signup image */
+
+@keyframes signup-zoom {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
 }
 
 .signup-form {
